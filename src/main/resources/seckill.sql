@@ -114,7 +114,7 @@ CREATE TABLE `seckill_user` (
   `user_name` varchar(20) NOT NULL COMMENT '用户名',
   `user_account` varchar(20) NOT NULL COMMENT '用户账号',
   `user_password` varchar(50) NOT NULL COMMENT '用户密码',
-  `user_sex` int(2) NOT NULL,
+  `user_sex` int(2) NOT NULL COMMENT '用户性别',
   `user_age` int(4) NOT NULL COMMENT '用户年龄',
   `user_address` varchar(200) NOT NULL COMMENT '用户住址',
   `user_email` varchar(40) NOT NULL DEFAULT '' COMMENT '用户邮箱',
