@@ -30,7 +30,7 @@ CREATE TABLE `seckill_order` (
   `pay_status` int(2) NOT NULL COMMENT '支付状态',
   `consignee_name` varchar(50) NOT NULL COMMENT '收货人姓名',
   `consignee_address` varchar(100) NOT NULL COMMENT '收货人地址',
-  `consignee_phone` int(10) NOT NULL COMMENT '收货人电话',
+  `consignee_phone` bigint(11) NOT NULL COMMENT '收货人电话',
   `trade_serial_number` varchar(100) NOT NULL COMMENT '交易流水号',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
