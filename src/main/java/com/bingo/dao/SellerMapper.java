@@ -3,7 +3,6 @@ package com.bingo.dao;
 import com.bingo.model.Seller;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
 /**
  * SellerMapper 接口
@@ -31,7 +30,6 @@ public interface SellerMapper {
      * @param id 商家编号
      * @return 商家
      */
-    @Select({"select ", SELECT_FIELDS, " from ", TABLE_NAME, " where id = #{id}"})
     Seller findById(int id);
 
 }

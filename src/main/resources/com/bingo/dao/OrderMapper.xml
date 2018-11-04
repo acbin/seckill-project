@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.bingo.dao.OrderMapper">
+    <sql id="table">seckill_order</sql>
+    <sql id="selectFields">id, product_id, pay_amount, user_id, seller_id, create_time, pay_time, pay_status, consignee_name, consignee_address, consignee_phone, trade_serial_number
+    </sql>
+    <select id="findById" resultType="com.bingo.model.Order">
+        SELECT
+        <include refid="selectFields"/>
+        FROM
+        <include refid="table"/>
+        WHERE id = #{id}
+    </select>
+
+</mapper>

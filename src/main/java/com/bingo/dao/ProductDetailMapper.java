@@ -3,7 +3,6 @@ package com.bingo.dao;
 import com.bingo.model.ProductDetail;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
 /**
  * ProductDetailMapper 接口
@@ -32,6 +31,5 @@ public interface ProductDetailMapper {
      * @param id 商品详情编号
      * @return 商品详情
      */
-    @Select({"select ", SELECT_FIELDS, " from ", TABLE_NAME, " where id = #{id}"})
     ProductDetail findById(int id);
 }

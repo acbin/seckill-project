@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.bingo.dao.SellerMapper">
+    <sql id="table">seckill_seller</sql>
+    <sql id="selectFields">id, seller_name, seller_shop_name, seller_account, seller_password, seller_scope
+    </sql>
+    <select id="findById" resultType="com.bingo.model.Seller">
+        SELECT
+        <include refid="selectFields"/>
+        FROM
+        <include refid="table"/>
+        WHERE id = #{id}
+    </select>
+
+</mapper>

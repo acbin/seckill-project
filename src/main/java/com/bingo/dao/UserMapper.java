@@ -3,7 +3,6 @@ package com.bingo.dao;
 import com.bingo.model.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
 /**
  * UserMapper 接口
@@ -32,6 +31,5 @@ public interface UserMapper {
      * @param id 用户编号
      * @return 用户
      */
-    @Select({"select ", SELECT_FIELDS, " from ", TABLE_NAME, " where id = #{id}"})
     User findById(int id);
 }

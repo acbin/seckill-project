@@ -3,7 +3,6 @@ package com.bingo.dao;
 import com.bingo.model.Order;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
 /**
  * OrderMapper 接口
@@ -33,6 +32,5 @@ public interface OrderMapper {
      * @param id 订单id
      * @return 订单
      */
-    @Select({"select ", SELECT_FIELDS, " from ", TABLE_NAME, " where id = #{id}"})
     Order findById(int id);
 }
