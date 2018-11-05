@@ -15,7 +15,7 @@ import javax.annotation.Resource;
  */
 
 @Service
-public class ProductServiceTest implements ProductService {
+public class ProductServiceImpl implements ProductService {
 
     @Resource
     private ProductMapper productMapper;
@@ -23,5 +23,10 @@ public class ProductServiceTest implements ProductService {
     @Override
     public Product queryById(int id) {
         return productMapper.findById(id);
+    }
+
+    @Override
+    public int save(Product product) {
+        return productMapper.save(product);
     }
 }

@@ -24,4 +24,9 @@ public class SellerServiceImpl implements SellerService {
     public Seller queryById(int id) {
         return sellerMapper.findById(id);
     }
+
+    @Override
+    public int save(Seller seller) {
+        return sellerMapper.save(seller);
+    }
 }

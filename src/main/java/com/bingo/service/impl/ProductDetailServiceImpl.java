@@ -24,4 +24,9 @@ public class ProductDetailServiceImpl implements ProductDetailService {
     public ProductDetail queryById(int id) {
         return productDetailMapper.findById(id);
     }
+
+    @Override
+    public int save(ProductDetail productDetail) {
+        return productDetailMapper.save(productDetail);
+    }
 }
